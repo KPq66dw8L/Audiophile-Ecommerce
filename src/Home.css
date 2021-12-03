@@ -1,0 +1,346 @@
+/* COLOR VARIABLES */
+:root {
+    --dark-saumon: #D87D4A;
+    --light-saumon: #FBAF85;
+    --black: #101010;
+    --pure-black: #000000;
+    --pure-white: #FFFFFF;
+    --grey: #F1F1F1;
+    --light-grey: #FAFAFA;
+    --error: #CD2C2C;
+    --backgroud-colo: #F2F2F2;
+    --nav-color: #191919;
+  }
+
+/* HERO */
+.hero-bg {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    margin-top: -90px;
+}
+
+.new-product {
+    color: var(--pure-white);
+    height: 40vw;
+}
+
+.new-product .new-product-description,
+.new-product .overline {
+    color: #979797;
+}
+
+.new-product-content {
+    width: 20vw;
+    margin: 0 0 0 20vw;
+    padding-top: 10vw;
+}
+
+.new-product-description {
+    margin: 3vw 0;
+}
+
+.hero-bg.tablet{
+    display: none;
+}
+
+.hero-bg.mobile{
+    display: none;
+}
+
+/* END HERO */
+
+/* CATEGORY MENU */
+.home-sub-menu {
+    margin-top: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.home-sub-menu h6 {
+    margin: 0;
+    margin-top: 100%;
+}
+
+.home-sub-menu a {
+    background-color: #e2e2e2;
+    border-radius: 5px;
+    width: 300px;
+    height: 180px;
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.home-sub-menu a .cat-thumb {
+    transform: scale(0.5);
+    margin-bottom: -400px;
+}
+/* END CATEGORY MENU */
+
+/* HOME CONTENT */
+
+.home-content {
+    display: grid;
+    margin: 10vw 5vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 40vh 30vh 1fr;
+    row-gap: 5vw;
+}
+
+.ZX9 {
+    grid-column: 1/3;
+    grid-row-start: 1;
+    border-radius: 10px;
+    background: url("./assets/home/desktop/pattern-circles.svg") no-repeat;
+    background-color: var(--dark-saumon)!important;
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10vw;
+    color: var(--pure-white);
+}
+
+.ZX9 img {
+    width: 410px;
+    height: 493px;
+    margin-top: auto;
+}
+
+.ZX9-text {
+    width: 30%;
+    padding: 5vw;
+}
+
+.home-content .ZX9 .button-2 {
+    background-color: var(--black);
+    color: var(--pure-white);
+    box-shadow: none;
+}
+
+.home-content .ZX9 .button-2:hover {
+    background-color: #979797;
+}
+
+.ZX7 {
+    grid-column: 1/3;
+    grid-row-start: 2;
+    width: 100%;
+    border-radius: 10px;
+    background: url("./assets/home/desktop/image-speaker-zx7.jpg") no-repeat;
+    background-size: cover;
+    height: 320px;
+}
+
+.ZX7 .under-ZX7 {
+    margin: 20px 10vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.YX1-img {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.under-YX1-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 4vw 1vw;
+}
+
+.YX1-text {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    background-color: #dbdbdb;
+    width: 540px;
+    height: 320px;
+    border-radius: 10px;
+}
+
+.XXXX {
+    grid-column-start: 1;
+    grid-row-start: 4!important;
+    width: 60%;
+    padding: 5vw;
+}
+
+.XXXX span {
+    color: var(--dark-saumon);
+}
+
+.XXXX p {
+    color: #979797;
+}
+
+.XXXX-img {
+    grid-row-start: 4!important;
+    width: 70%;
+    border-radius: 10px;
+    margin: auto;
+}
+
+/* END HOME CONTENT */
+
+@media only screen and (max-width: 1320px) {
+    /* HERO */
+    .hero-bg.desktop{
+        display: none;
+    }
+    .hero-bg.tablet{
+        display:inline-block;
+    }
+    .new-product {
+        height: 80vw;
+    }
+    .new-product-content {
+        width: 80vw;
+        margin: 0 0 0 10vw;
+        padding-top: 10vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .new-product-content h1{
+        width: 50vw;
+    }
+    .new-product-description{
+        width: 50vw;
+    }
+    /* END HERO */
+    /* CATEGORY MENU */
+    .home-sub-menu {
+        margin-top: 300px;
+    }
+    .home-sub-menu a {
+        width: 200px;
+        height: 180px;
+        margin: 0 10px;
+    }
+    .home-sub-menu a .cat-thumb {
+        transform: scale(0.4);
+        margin-bottom: -320px;
+    }
+    /* END CATEGORY MENU */
+    /* HOME CONTENT */
+    .home-content {
+        display: grid;
+        margin: 10vw 5vw;
+        width: 70%;
+        gap: 1vw;
+        grid-template-rows: 1fr 40vh 30vh 1fr;
+    }
+    .ZX9 img {
+        width: 197px;
+        height: 237px;
+    }
+    
+    .ZX9 {
+        flex-direction: column;
+        padding: 2vw;
+        height: fit-content;
+        width: 85vw;
+        align-items: center;
+        grid-column-start: 1;
+    }
+    .ZX9 * {
+        text-align: center;
+    }
+    .ZX9-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .ZX7 {
+        width: 89vw;
+    }
+    .YX1-img {
+        width: 46vw;
+    }
+    .YX1-text {
+        width: 40vw;
+        height: fit-content;
+    }
+    /* END HOME CONTENT */
+}
+@media only screen and (max-width: 650px) {
+    /* HERO */
+    h1 {
+        font-size: 36px!important;
+    }
+    .hero-bg.tablet{
+        display: none;
+    }
+    .hero-bg.mobile{
+        display:inline-block;
+        height: 100%;
+    }
+    .new-product {
+        height: 100vh;
+    }
+    .new-product-description {
+        margin: 10vh 0;
+        width: 80vw;
+    }
+    .new-product-content h1{
+        width: auto;
+        transform: scale(0.9, 0.9);
+    }
+    .new-product-content {
+        width: auto;
+        margin: 0 0 0 0;
+        padding-top: 10vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* END HERO */
+    /* CATEGORY MENU */
+    .home-sub-menu {
+        margin-top: 100px;
+        flex-direction: column;
+    }
+    .home-sub-menu a {
+        width: 90%;
+        height: 200px;
+        margin: 50px auto;
+    }
+    .home-sub-menu a .cat-thumb {
+        transform: scale(0.4);
+        margin-bottom: -110vw;
+    }
+    /* END CATEGORY MENU */
+    /* HOME CONTENT */
+    .home-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 40vh 60vw 30vh 30vh 90vh;
+        margin: 4vw;
+    }
+    .YX1-img {
+        width: 89vw;
+        grid-column-start: 1;
+        grid-row-start: 3;
+        height: auto;
+        margin: 0;
+    }
+    .YX1-text {
+        width: 90vw;
+        height: fit-content;
+        grid-column-start: 1;
+        grid-row-start: 4;
+    }
+    .XXXX-img {
+        grid-row-start: 5!important;
+    }
+    .XXXX {
+        grid-row-start: 6!important;
+        text-align: center;
+        padding: 20vw;
+    }
+  }
