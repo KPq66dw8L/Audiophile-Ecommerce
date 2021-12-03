@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { useParams, useLocation, Link  } from 'react-router-dom';
 // STYLES
 import '../Checkout.css';
 import '../App.css'
@@ -179,7 +180,7 @@ export default function Checkout() {
                     </div>
                     
                     {/* Send form to backend on click... when backend up */}
-                    <div className="pay button-1 noselect"><p className="sub-title">Continue & pay</p></div>
+                    <Link to={`#`} ><div className="pay button-1 noselect"><p className="sub-title">Continue & pay</p></div></Link>
                 </div>
             </div>
         </div>

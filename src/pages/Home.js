@@ -20,21 +20,27 @@ function Home({qtt, qttSetter}) {
             <NewProduct />
 
             <div className="home-sub-menu">
-                <a href="/headphones">
+            <Link to={`/headphones`} >
+                <a href="#">
                     <img className="cat-thumb noselect" src="/assets/shared/desktop/image-category-thumbnail-headphones.png" />
                     <h6>Headphones</h6>
                     <div className="button-3 noselect"><p className="sub-title">Shop <img src="/assets/shared/desktop/icon-arrow-right.svg"></img></p></div>
                 </a>
-                <a href="/speakers">
+            </Link>
+            <Link to={`/speakers`} >
+                <a href="#">
                     <img className="cat-thumb noselect" src="/assets/shared/desktop/image-category-thumbnail-speakers.png" />
                     <h6>Speakers</h6>
                     <div className="button-3 noselect"><p className="sub-title">Shop <img src="/assets/shared/desktop/icon-arrow-right.svg"></img></p></div>
                 </a>
-                <a href="/earphones">
+            </Link>
+            <Link to={`/earphones`} >
+                <a href="#">
                     <img className="cat-thumb noselect" src="/assets/shared/desktop/image-category-thumbnail-earphones.png" />
                     <h6>Earphones</h6>
                     <div className="button-3 noselect"><p className="sub-title">Shop <img src="/assets/shared/desktop/icon-arrow-right.svg"></img></p></div>
                 </a>
+            </Link>
             </div>
 
             <div className="home-content">  

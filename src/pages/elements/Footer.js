@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-
+import { useParams, useLocation, Link  } from 'react-router-dom';
 
 function Footer() {
 
@@ -8,10 +8,28 @@ function Footer() {
             <div className="nav-footer">
                 <a href="/" className="noselect"><img src="/assets/shared/desktop/logo.svg"/></a>
                 <div className="nav-footer-menu">
-                    <a href="/" className="sub-title">Home</a>
-                    <a href="/headphones" className="sub-title">Headphones</a>
-                    <a href="/speakers" className="sub-title">Speakers</a>
-                    <a href="/earphones" className="sub-title">Earphones</a>
+                <Link
+                        to={`/`}
+                        >
+                            <a href="#" className="sub-title">Home</a>
+                        </Link>
+                        <Link
+                        to={`/headphones`}
+                        >
+                            <a href="#" className={`sub-title `}>Headphones</a>
+                        </Link>
+                    
+                    <Link
+                        to={`/speakers`}
+                        >
+                            <a href="#" className={`sub-title `}>Speakers</a>
+                        </Link>
+                    
+                    <Link
+                        to={`/earphones`}
+                        >
+                            <a href="#" className={`sub-title `}>Earphones</a>
+                        </Link>
                 </div>
             </div>
             <div className="footer-global">

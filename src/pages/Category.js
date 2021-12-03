@@ -12,6 +12,12 @@ import '../App.css'
 import DB from "../data.json"
 
 function Category({product}) {
+
+    //scroll to the top of the detail page when rendered 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    })
+
     //because nth-child(2n) not working
     let tmp=``;
     return (

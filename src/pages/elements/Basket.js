@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useParams, useLocation, Link  } from 'react-router-dom';
 //STYLES
 import '../../styles/Basket.css'
 
@@ -88,7 +89,7 @@ export default function Basket({cartItems, cartItemsSetter, basketVisible, wrapp
                 </div>
             ))}
 
-            {detailCartItems.length != 0 && <div className="basket-empty sub-title" ><a href="/checkout" className="sub-title">checkout</a></div>}
+            {detailCartItems.length != 0 && <div className="basket-empty sub-title" ><Link to={`/checkout`} ><a href="#" className="sub-title">checkout</a></Link></div>}
             
         </div>
         );

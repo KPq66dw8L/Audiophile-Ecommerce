@@ -45,10 +45,29 @@ function NavBar({cartItems, cartItemsSetter}) {
             <div className="nav border-bot">
                 <a href="/" className="noselect"><img src="/assets/shared/desktop/logo.svg"/></a>
                 <div className="nav-menu">
-                    <a href="/" className="sub-title">Home</a>
-                    <a href="/headphones" className={`sub-title ${orange1}`}>Headphones</a>
-                    <a href="/speakers" className={`sub-title ${orange2}`}>Speakers</a>
-                    <a href="/earphones" className={`sub-title ${orange3}`}>Earphones</a>
+                        <Link
+                        to={`/`}
+                        >
+                            <a href="#" className="sub-title">Home</a>
+                        </Link>
+                        <Link
+                        to={`/headphones`}
+                        >
+                            <a href="#" className={`sub-title ${orange1}`}>Headphones</a>
+                        </Link>
+                    
+                    <Link
+                        to={`/speakers`}
+                        >
+                            <a href="#" className={`sub-title ${orange2}`}>Speakers</a>
+                        </Link>
+                    
+                    <Link
+                        to={`/earphones`}
+                        >
+                            <a href="#" className={`sub-title ${orange3}`}>Earphones</a>
+                        </Link>
+                    
                 </div>
                 {/* Hamburger Menu  */}
                 <nav role="navigation">
@@ -58,10 +77,26 @@ function NavBar({cartItems, cartItemsSetter}) {
                     <span></span>
                     <span></span>
                     <ul className="nav-text" id="menu">
-                        <li className="nav-div-active"><a href="/"> Home</a></li>
-                        <li><a href="/headphones">Headphones</a></li>
-                        <li><a href="/speakers">Speakers</a></li>
-                        <li><a href="/earphones">Earphones</a></li>
+                        <li className="nav-div-active"><Link
+                        to={`/`}
+                        >
+                            <a href="#" className="sub-title">Home</a>
+                        </Link></li>
+                        <li><Link
+                        to={`/headphones`}
+                        >
+                            <a href="#" className={`sub-title ${orange1}`}>Headphones</a>
+                        </Link></li>
+                        <li><Link
+                        to={`/speakers`}
+                        >
+                            <a href="#" className={`sub-title ${orange2}`}>Speakers</a>
+                        </Link></li>
+                        <li><Link
+                        to={`/earphones`}
+                        >
+                            <a href="#" className={`sub-title ${orange3}`}>Earphones</a>
+                        </Link></li>
                     </ul>
                     </div>
                 </nav>
