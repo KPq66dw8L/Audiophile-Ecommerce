@@ -571,14 +571,30 @@ nav[role=navigation] {
   /* END FOOTER */
 }
 
+@media only screen and (max-width: 900px) {
+  .nav a {
+    margin: 0 5px;
+  }
+  .nav-footer a{
+    margin: 0 5px;
+  }
+}
+
 @media only screen and (max-width: 650px) {
+  .XXXX {
+    padding: 20vw 5vw 0 5vw!important;
+    margin: auto;
+  }
   /* FOOTER */
   .footer {
+    margin-top: 20vw;
+    display: inline-block;
     background-color: var(--nav-color);
     color: var(--pure-white);
-    height: 60vh;
-    padding: 0 5vw;
-    padding-top: 15vw;
+    height: fit-content;
+    
+    padding: 0 5vw!important;
+    padding-top: 15vw!important;
   }
   .nav-footer{
     flex-direction: column;

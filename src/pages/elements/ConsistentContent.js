@@ -6,25 +6,24 @@ function ConsistentContent() {
         <div className="consistent-content">
             <div className="home-sub-menu">
             <Link to={`/headphones`} >
-                <a href="#">
                     <img className="cat-thumb noselect" src="/assets/shared/desktop/image-category-thumbnail-headphones.png" />
                     <h6>Headphones</h6>
                     <div className="button-3 noselect"><p className="sub-title">Shop <img src="/assets/shared/desktop/icon-arrow-right.svg"></img></p></div>
-                </a>
+                
             </Link>
             <Link to={`/speakers`} >
-                <a href="#">
+                
                     <img className="cat-thumb noselect" src="/assets/shared/desktop/image-category-thumbnail-speakers.png" />
                     <h6>Speakers</h6>
                     <div className="button-3 noselect"><p className="sub-title">Shop <img src="/assets/shared/desktop/icon-arrow-right.svg"></img></p></div>
-                </a>
+                
             </Link>
             <Link to={`/earphones`} >
-                <a href="#">
+               
                     <img className="cat-thumb noselect" src="/assets/shared/desktop/image-category-thumbnail-earphones.png" />
                     <h6>Earphones</h6>
                     <div className="button-3 noselect"><p className="sub-title">Shop <img src="/assets/shared/desktop/icon-arrow-right.svg"></img></p></div>
-                </a>
+                
             </Link>
             </div>
 
