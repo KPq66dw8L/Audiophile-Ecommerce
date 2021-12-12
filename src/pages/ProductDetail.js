@@ -110,12 +110,18 @@ function ProductDetail({qtt, qttSetter, cartItems, cartItemsSetter}) {
                         <h3>you may also like</h3>
                         <div className="likable">
                             {currentProduct.others.map( (likable,index) => {
+                                // we get thet category by poping thet last word in the product slug as no 
+                                // cat is specified in the "others" obj database + we may have to add an "s"
+                                let catLikable = likable.slug.split("-").pop();
+                                if (catLikable === "speaker"){
+                                    catLikable = catLikable + "s";
+                                }
 
                                 return (
-                                    <div className="like">
+                                    <div className="like" key={index}>
                                         <img src={`${process.env.PUBLIC_URL}/${likable.image.tablet}`}></img>
                                         <h5>{likable.name}</h5>
-                                        <a href={`${likable.slug}`}><div className="button-1 noselect"><p className="sub-title">See product </p></div></a>
+                                        <Link to={`/${catLikable}/${likable.slug}`}><div className="button-1 noselect"><p className="sub-title">See product </p></div></Link>
                                     </div>
                                 );
                             } )}
