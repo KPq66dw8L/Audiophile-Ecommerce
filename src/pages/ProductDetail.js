@@ -13,10 +13,10 @@ function ProductDetail({qtt, qttSetter, cartItems, cartItemsSetter}) {
 
     
     
-    //scroll to the top of the detail page when rendered 
+    //scroll to the top of the detail page when the url changes
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [])
+    }, [window.location.href])
     
     // to get Link props aka 'state': 'from'
     // const location = useLocation();
@@ -54,7 +54,7 @@ function ProductDetail({qtt, qttSetter, cartItems, cartItemsSetter}) {
     return (
         <div className="detail-page">
             
-           <a href={`${from}`} className="go-back grey">Go Home</a>
+           {/* <a href={`${from}`} className="go-back grey">Go Home</a> */}
             <div className="product-details">
                 <div className="row-one">
                     <img src={`${process.env.PUBLIC_URL}/${currentProduct.image.desktop}`}></img>

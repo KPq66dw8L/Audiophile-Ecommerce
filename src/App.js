@@ -14,11 +14,18 @@ import './App.css';
 // DB
 import DB from "./data.json"
 
+// Interesting point from review, but not useful to change here: 
+// Typically you don't need to use useCallback. Unless you have a very
+// specific reason for using it, consider just removing it. (or if you just
+// want to learn about it, it's fine to use it for that reason). But either way,
+// the naming should the the same. You should be able to remove the
+// useCallback logic and the rest of the code should run just fine.
+
 function App() {
   const [qtt, setQtt] = useState(1);
 
   //To maintain a single function instance between rendering with Home etc
-  const wrapperSetQtt =  useCallback(val => {
+  const wrapperSetQtt = useCallback(val => {
     setQtt(val);
   }, [setQtt]);
   //Cart
@@ -27,14 +34,7 @@ function App() {
     setCartItems(val);
   }, [setCartItems]);
   localStorage.setItem('cart', JSON.stringify(cartItems))
-  // let tmp = JSON.parse(localStorage.getItem('cart'));
-  // console.log(tmp)
   
-  // Number of items in cart, needed for notification
-  // const [cartSize, setCartSize] = useState(cartItems.length);
-  // const wrapperSetCartSize =  useCallback(val => {
-  //   setCartSize(val);
-  // }, [setCartSize]);
 
   return (
     <div className="App">

@@ -13,27 +13,28 @@ function NavBar({cartItems, cartItemsSetter}) {
     let orange2 = '';
     let orange3 = '';
 
+    //no else if to be able to potentially color multiple categories 
     if (path.includes("headphones")) {
         orange1 = 'orange';
-    } else {
-        if (path.includes("speakers")){
-            orange2 = 'orange';
-        } else {
-            if (path.includes("earphones")){
-                orange3 = 'orange';
-            }
-        }
+    } 
+    if (path.includes("speakers")){
+        orange2 = 'orange';
+    } 
+    if (path.includes("earphones")){
+        orange3 = 'orange';
     }
+        
+    
 
     //Cart
-    const [basketVisible, setBasketVisible] = useState(0);
+    const [isBasketVisible, setIsBasketVisible] = useState(false); //convention isXXXX boolean
 
     const wrapperSetBasketVisible =  useCallback(val => {
-        setBasketVisible(val);
-      }, [basketVisible]);
+        setIsBasketVisible(val);
+      }, [isBasketVisible]);
 
       function handleBasketVisible(val){
-        setBasketVisible(val);
+        setIsBasketVisible(val);
         // ajouter l'assombrissement du reste de la pagequand cart open
       }
 
@@ -102,15 +103,15 @@ function NavBar({cartItems, cartItemsSetter}) {
                 </nav>
                 {/* Basket icon */}
                 <div
-                onClick={() => {basketVisible ? handleBasketVisible(0) : handleBasketVisible(1)}}
+                onClick={() => handleBasketVisible(!isBasketVisible)}
                 className=" cart-ico noselect">
                     <img src="/assets/shared/desktop/icon-cart.svg"/>
                 </div>
                 {/* Notification nb items in cart */}
                 {/* {cartSize ? <div className="cartSize-notif noselect">{cartSize}</div> : null} */}
                 {/* Basket Element */}
-                {basketVisible ? <Basket
-                basketVisible={basketVisible}
+                {isBasketVisible ? <Basket
+                basketVisible={isBasketVisible}
                 wrapperBasketVisible={wrapperSetBasketVisible}
                 cartItems={cartItems}
                 cartItemsSetter={cartItemsSetter}

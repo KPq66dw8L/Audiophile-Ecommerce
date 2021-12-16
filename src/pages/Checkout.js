@@ -7,11 +7,17 @@ import '../App.css'
 export default function Checkout() {
     // cart is an array
     const cart = JSON.parse(localStorage.getItem('cart'));
+
+    //helper function, could be written with reduce
+    function calcTotal(items) {
+        let total = 0;
+        items.map( ({qty, price}, index) => {
+            total += qty * price;
+        })
+        return total
+    }
     
-    let total = 0;
-    cart.map( (item, index) => {
-        total += item.qty * item.price;
-    })
+    const total = calcTotal(cart);
     
 
     return (
