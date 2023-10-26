@@ -11,6 +11,9 @@ Audiophile Ecommerce est un site web de commerce électronique front-end réacti
 5. [Auteur](#auteur)
 
 ## Installation
+Vous pouvez simplement visiter le site ici : https://ecommerce-responsive-audiophile.netlify.app/
+
+Ou l'installer localement :
 - Assurez-vous d'avoir installé [Node.js](https://nodejs.org/)
 - Clonez ce dépôt :
 ```bash
@@ -21,18 +24,18 @@ npm start
 ```
 
 ## Utilisation
-Visitez **http://localhost:3000** dans votre navigateur pour accéder au site.
-Explorez les produits, ajoutez-les à votre panier et passez à la caisse pour voir les fonctionnalités en action.
+- Visitez **http://localhost:3000** dans votre navigateur pour accéder au site.
+- Explorez les produits, ajoutez-les à votre panier et passez à la caisse pour voir les fonctionnalités en action.
 
 ## Caractéristiques
-Interface utilisateur réactive
-Visualisation des produits
-Gestion du panier
-Processus de paiement simulé
+- Interface utilisateur réactive
+- Visualisation des produits
+- Gestion du panier
+- Processus de paiement simulé
 
 ## Technologies Utilisées
-ReactJS
-Figma pour la conception du design
+- ReactJS
+- Figma pour la conception du design
 
 ## Auteur
 Créé en autonomie par HERBAUX Julien
